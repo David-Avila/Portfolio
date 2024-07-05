@@ -52,6 +52,7 @@ body{
     flex-flow: row wrap;
 
     position: relative;
+    overflow-y: scroll;
 }
 
 .introDiv{
