@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/******************************************* NAV BAR ********************************************/
+
+.navBar{
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+
+    gap: 20px;
+}
+
+.navBar > a{
+    text-decoration: none;
+    color: inherit;
+    
+    transition: all 0.4s ease;
+}
+
+.navBar > a:hover{
+    font-weight: 800;
+}
+
+
+/************************************* HEADER SECTION *******************************************/
+
+.header,
+.projects{
+    width: 100%;
+    height: calc(100vh - 96px);
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+
+    position: relative;
+}
+
+
+.introDiv{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+    width: 50%;
+}
+
+.introDiv > h1{
+    text-align: left;
+}
+
+@keyframes border-radius-anim {
+    0%, 100% {
+      border-radius: 175px 125px 75px 125px;
+    }
+  
+    25%{
+      border-radius: 125px 175px 125px 75px;
+    }
+  
+    50%{
+      border-radius: 75px 125px 175px 125px;
+    }
+  
+    75%{
+      border-radius: 125px 75px 125px 175px;
+    }
+} 
+  
+.headerImage{
+    width: 300px;
+    height: 320px;
+
+    animation-name: border-radius-anim;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.headerTitle{
+    font-size: 2.5em;
+    word-wrap: break-word;
+    margin: 0;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+@media only screen and (max-width: 680px) {
+    .headerTitle {
+      font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .headerImage {
+      width: 240px;
+      height: 260px;
+      aspect-ratio: 1;
+    }
+}
+
+/**************************************** PROJECTS ***************************************/
+.projects{
+    flex-flow: column nowrap;
+}
+
+.projectsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;   
+    gap: 20px;
+}
+
+.projectPreview{
+    width: 300px;
+    height: 235px;
+
+    border-radius: 25px;
+    background-color: black;
+    border: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;   
+
+    overflow: hidden;
+    position: relative;
+}
+
+.projectPreviewProps{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    background-color: rgb(39, 39, 39);
+    color: white;
+
+    top: 70%;
+
+    transition: all 0.3s ease;
+}
+
+.projectPreview:hover > .projectPreviewProps{
+    top: 0%;
+}
+
+.projectPreviewProps > h3{
+    width: 50%;
+    text-align: center;
+}
+
+.projectPreviewTags{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;   
+}
+
+.flexRow{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;   
+}
+
+.projectDesc{
+    height: 80%;
+    width: 90%;
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column wrap;   
+}
+
+.btnLink{
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 0.8em;
+
+    background-color: inherit;
+    color: black;
+    border: 2px solid black;
+    font-weight: 500;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.btnLink:hover{
+    font-size: 0.9em;
+    padding: 7px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+/************************************** TAGS ************************************/
+.tag{
+    width: fit-content;
+    height: fit-content;
+    padding-inline: 4px;
+    border-radius: 5px;
+}
+
+.react{
+    background-color: darkcyan;
+    color: black;
+}
+
+.svelte,
+.sveltekit{
+    background-color: rgb(199, 80, 44);
+    color: white;
+}
+
+.nextjs{
+    background-color: black;
+    color: white;
+}
