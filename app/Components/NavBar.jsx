@@ -6,8 +6,6 @@ export default function NavBar() {
     <nav className='navBar'>
         <Link href='/'>Home</Link>
         <Link href='/projects'>Projects</Link>
-        <Link href='/about'>About Me</Link>
-        <Link href='/links'>Links</Link>
     </nav>
   )
 }

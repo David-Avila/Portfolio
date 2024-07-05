@@ -1,4 +1,12 @@
+:root{
+    --bgColor: rgb(26, 25, 25);
+    --fontColor: rgb(216, 216, 216);
+}
+
 body{
+    background-color: var(--bgColor);
+    color: var(--fontColor);
+
     margin: 0;
     padding: 0;
     width: 100%;
@@ -46,7 +54,6 @@ body{
     position: relative;
 }
 
-
 .introDiv{
     display: flex;
     align-items: flex-start;
@@ -54,6 +61,12 @@ body{
     flex-flow: column nowrap;
 
     width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    .introDiv {
+      width: 90%;
+    }
 }
 
 .introDiv > h1{
@@ -113,7 +126,13 @@ body{
 
 /**************************************** PROJECTS ***************************************/
 .projects{
+    padding-top: 50px;
+    text-align: center;
     flex-flow: column nowrap;
+}
+
+.projects > h2{
+    margin: 50px 10px;
 }
 
 .projectsContainer{
@@ -122,6 +141,7 @@ body{
     justify-content: space-evenly;
     flex-flow: row wrap;   
     gap: 20px;
+    padding-bottom: 50px;
 }
 
 .projectPreview{
@@ -129,8 +149,9 @@ body{
     height: 235px;
 
     border-radius: 25px;
-    background-color: black;
+    background-color: var(--bgColor);
     border: 2px solid black;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 
     display: flex;
     align-items: center;
@@ -149,16 +170,19 @@ body{
     align-items: baseline;
     justify-content: space-between;
     flex-flow: column nowrap;
-    background-color: rgb(39, 39, 39);
-    color: white;
+    background-color: var(--bgColor);
+    color: var(--fontColor);
 
     top: 70%;
 
     transition: all 0.3s ease;
+    pointer-events: none;
+    
 }
 
 .projectPreview:hover > .projectPreviewProps{
     top: 0%;
+    pointer-events: auto;
 }
 
 .projectPreviewProps > h3{
@@ -200,7 +224,7 @@ body{
     font-size: 0.8em;
 
     background-color: inherit;
-    color: black;
+    color: var(--fontColor);
     border: 2px solid black;
     font-weight: 500;
 
@@ -212,7 +236,7 @@ body{
     padding: 7px;
     text-decoration: underline;
     cursor: pointer;
-    color: white;
+    color: var(--fontColor);
 }
 
 /************************************** TAGS ************************************/

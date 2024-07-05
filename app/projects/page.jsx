@@ -8,7 +8,7 @@ import imgShophere from '@/assets/projects/shophere.jpg'
 export default function Projects() {
   return (
     <section className='projects'>
-        <h1 className='headerTitle'>This are my projects</h1>
+        <h2 className='headerTitle'>This are my projects</h2>
         <div className='projectsContainer'>
             <ProjectPreview img={imgBlogIt} title="BlogIt" tags={['react']}
                 desc="A blog creation web site, share your knowledge, stories, news, anything you want."
