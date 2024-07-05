@@ -12,6 +12,47 @@ body{
     width: 100%;
 }
 
+.icon.next{
+    filter: invert(0.8);
+}
+
+/******************************** TOOLTIP *****************************************/
+.item{
+    position: relative;
+}
+
+.tooltip{
+    font-size: xx-small;
+    max-width: fit-content;
+    padding: 5px;
+    border: 1px solid inherit;
+    background-color: inherit;
+    border-radius: 5px;
+  
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    line-height: normal;
+    text-align: center;
+
+    transition: all 0.4s ease;
+  }
+  
+  .shown{
+    opacity: 1;
+    top: -300%;
+    pointer-events: auto;
+  }
+  
+  .hidden{
+    opacity: 0;
+    top: -250%;
+    pointer-events: none;
+  }
+
 /******************************************* NAV BAR ********************************************/
 
 .navBar{
@@ -41,7 +82,8 @@ body{
 /************************************* HEADER SECTION *******************************************/
 
 .header,
-.projects{
+.projects,
+.about{
     width: 100%;
     height: calc(100vh - 96px);
 
@@ -266,4 +308,23 @@ body{
 .nextjs{
     background-color: black;
     color: white;
+}
+
+/****************************************** ABOUT ********************************************/
+.about{
+    padding-top: 40px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.descParr{
+    width: min(90%, 70ch);
+}
+
+.skillsList{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: min(90%, 360px);
 }
