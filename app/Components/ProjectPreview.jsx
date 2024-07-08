@@ -24,11 +24,12 @@ export default function ProjectPreview({img, title, tags, desc, link}) {
 
             <div className="projectDesc">
                 <p>{desc}</p>
-                <button className='btnLink'
-                    onClick={() => {
-                        window.open(link, "_blank");
-                    }}
-                >Open Website</button>
+                {link != null && <button className='btnLink'
+                        onClick={() => {
+                            window.open(link, "_blank");
+                        }}
+                    >Open Website</button>
+                }
             </div>
         </div>
         
