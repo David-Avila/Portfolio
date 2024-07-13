@@ -8,7 +8,8 @@ export default function Home() {
 		<section className="header">
 			<div className='introDiv'>
 				<h1>Hi, i'm David Avila</h1>
-				<h1 className="headerTitle">I'm a passionate web developer looking for experience.</h1>
+				<h1 className="headerTitle">I will build the website you always wanted, not only that, I can 
+					also setup your domain name and web hosting, so you don't have to go through all that work.</h1>
 			</div>
 
 			<Image className='headerImage'
