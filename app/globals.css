@@ -85,7 +85,8 @@ body{
 .about,
 .contact{
     width: 100%;
-    height: calc(100vh - 96px);
+    height: fit-content;
+    min-height: 100vh;
 
     display: flex;
     align-items: center;

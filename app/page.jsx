@@ -4,7 +4,6 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <main>
 		<section className="header">
 			<div className='introDiv'>
 				<h1 className='headerTitle'>Hi, i'm David Avila</h1>
@@ -21,6 +20,5 @@ export default function Home() {
 				placeholder='blur'
 			></Image>
 		</section>
-    </main>
   )
 }
