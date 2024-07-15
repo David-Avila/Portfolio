@@ -102,8 +102,9 @@ a{
     justify-content: center;
     flex-flow: column nowrap;
 
-    gap: 30px;
+    margin-bottom: 30px;
 
+    gap: 30px;
     width: 50%;
 }
 
@@ -160,6 +161,8 @@ a{
     width: 300px;
     height: 320px;
 
+    margin-bottom: 30px;
+    
     animation-name: border-radius-anim;
     animation-duration: 20s;
     animation-iteration-count: infinite;
