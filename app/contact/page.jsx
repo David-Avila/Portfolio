@@ -1,6 +1,7 @@
 'use client'
 import { FaGoogle, FaLinkedin, FaGithub } from 'react-icons/fa'
 import React from 'react'
+import Link from 'next/link';
 
 export default function Contact() {
     const iconSize = 32;
@@ -14,7 +15,9 @@ export default function Contact() {
                     <FaGoogle className='socialIcon' size={iconSize}/>
                     <div className='linkProps'>
                         <h3>Gmail:</h3>
-                        <h4>aviladurandavid613@gmail.com</h4>
+                        <Link className='link'
+                            href="mailto:aviladurandavid613@gmail.com"                            
+                        ><h4>aviladurandavid613@gmail.com</h4></Link>
                     </div>
                 </div>
 
