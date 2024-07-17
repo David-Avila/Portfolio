@@ -387,6 +387,14 @@ a{
     gap: 20px;
 }
 
+.flex-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
 .linkDiv{
     display: flex;
     align-items: center;
@@ -416,4 +424,45 @@ a{
 
 .link:hover{
     text-decoration: underline;
+}
+
+/**************************************** Email Form ******************************************/
+
+.emailForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.contactFormInput{
+    width: min(80%, 440px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--fontColor);
+    font-size: 1em;
+    background-color: var(--bgColor);
+    color: var(--fontColor);
+}
+
+.textArea{
+    font-size: 1.5em;
+    min-height: 25ch;
+    height: auto;
+}
+
+.submitBtn{
+    width: auto;
+    font-weight: 500;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.submitBtn:hover{
+    font-weight: 800;
+    background-color: var(--fontColor);
+    color: var(--bgColor);
 }
